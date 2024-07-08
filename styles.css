@@ -1,0 +1,139 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.donation-container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  max-width: 300px;
+  margin: auto;
+}
+
+.tip-container {
+  margin-top: 20px;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  padding: 2px 0;
+  outline: none;
+  border-radius: 5px;
+  position: relative;
+  background: lightgreen;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  /* ball pointer for WebKit browsers */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: darkgreen;
+  border: 2px solid white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  transform: translateY(-13px);
+}
+
+input[type="range"]::-moz-range-thumb {
+  /* ball pointer for Mozilla browsers */
+  width: 30px;
+  height: 30px;
+  background: darkgreen;
+  border: 2px solid white;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+  transform: translateY(-13px);
+}
+
+/*  slider for WebKit browsers */
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+/* slider for Mozilla browsers */
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  background: lightgreen;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.tooltip {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  font-size: 14px;
+  display: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip-arrow {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+}
+
+.total-container {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+#custom-tip {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.breakpoints {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 0;
+  pointer-events: none;
+}
+
+.breakpoint {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: darkgreen;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
