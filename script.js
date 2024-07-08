@@ -13,7 +13,7 @@ const emoticons = ["👎", "👍", "👏", "🙌", "🎉"];
 let tipAmountString;
 
 function updateTipAmount() {
-  const donationAmount = parseFloat(donationInput.value);
+  const donationAmount = parseFloat(donationInput.value || 0);
   const percentage = percentages[tipSlider.value];
   const tipAmount = donationAmount * percentage;
   tipAmountSpan.textContent = `£${tipAmount.toFixed(2)}`;
