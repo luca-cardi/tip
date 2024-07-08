@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donation Tip Slider</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="donation-container">
+      <div class="donation-amount-container">
+        <p class="currency">£</p>
         <label for="donation">Your donation</label>
         <input type="number" id="donation" value="10" />
-        <div class="tip-container">
-            <label for="tip">Tip amount</label>
-            <span id="tip-amount">£1.50</span>
-            <div class="slider-container">
-                <input type="range" id="tip-slider" min="0" max="4" step="1" value="2">
-                <div id="tooltip" class="tooltip">
-                    <div class="tooltip-text"></div>
-                    <div class="tooltip-arrow"></div>
-                </div>
-                <div class="breakpoints">
-                    <div  style="left: 0%;"></div>
-                    <div class="breakpoint" style="left: 26%;"></div>
-                    <div class="breakpoint" style="left: 50%;"></div>
-                    <div class="breakpoint" style="left: 74%; right: 20px;"></div>
-                    <div  style="left: 100%;"></div>
-                </div>
-            </div>
-            <input type="number" id="custom-tip" placeholder="Enter custom amount">
-        </div>
+      </div>
+      <div class="tip-amount-container">
+        <label for="tip">Tip amount</label> <span id="tip-amount">£1.50</span>
+      </div>
+      <div class="tip-container">
+        <p >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
 
-        <div class="total-container">
-            <label for="total">Total to pay:</label>
-            <span id="total">£11.50</span>
+        </p>
+        <div class="slider-container">
+          <input
+            type="range"
+            id="tip-slider"
+            min="0"
+            max="4"
+            step="1"
+            value="2"
+             style="padding:0;"
+     
+          />
+          <div id="tooltip" class="tooltip">
+            <div class="tooltip-text"></div>
+            <div class="tooltip-arrow"></div>
+          </div>
+          <div class="breakpoints">
+            <div class="" style="left: 0%"></div>
+            <div class="breakpoint bp-25" style="left: 25%"></div>
+            <div class="breakpoint bp-50" style="left: 50%"></div>
+            <div class="breakpoint bp-75" style="left: 75%;"></div>
+            <div  style="left: 100%"></div>
+          </div>
         </div>
+        <input
+          type="number"
+          id="custom-tip"
+          placeholder="Enter custom amount"
+        />
+      </div>
+
+      <div class="total-container">
+        <label for="total">Total to pay:</label>
+        <span id="total">£11.50</span>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
