@@ -80,9 +80,6 @@ function updateBreakpoints() {
   if (percentage > 75) {
     document.querySelector(".bp-75").style.background = "white";
   }
-  if (percentage > 100) {
-    document.querySelector(".bp-100").style.background = "white";
-  }
 }
 
 donationInput.addEventListener("input", updateTipAmount);

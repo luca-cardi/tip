@@ -100,7 +100,7 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%;
   position: relative;
   z-index: 2;
-  transform: translateY(-13px);
+  transform: translateY(-6px);
   cursor: grab;
 }
 
