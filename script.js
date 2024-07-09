@@ -2,7 +2,6 @@ const donationInput = document.getElementById("donation");
 const tipAmountSpan = document.getElementById("tip-amount");
 const tipSlider = document.getElementById("tip-slider");
 const totalSpan = document.getElementById("total");
-const customTipInput = document.getElementById("custom-tip");
 const tooltip = document.getElementById("tooltip");
 const tooltipText = document.querySelector(".tooltip-text");
 
@@ -24,13 +23,6 @@ function updateTipAmount() {
   updateSliderBackground();
   updateBreakpoints();
   
-}
-
-function updateCustomTipAmount() {
-  const donationAmount = parseFloat(donationInput.value);
-  const customTipAmount = parseFloat(customTipInput.value) || 0;
-  tipAmountSpan.textContent = `£${customTipAmount.toFixed(2)}`;
-  totalSpan.textContent = `£${(donationAmount + customTipAmount).toFixed(2)}`;
 }
 
 function updateTooltip() {
@@ -84,7 +76,6 @@ function updateBreakpoints() {
 
 donationInput.addEventListener("input", updateTipAmount);
 tipSlider.addEventListener("input", updateTipAmount);
-customTipInput.addEventListener("input", updateCustomTipAmount);
 tipSlider.addEventListener("input", updateTooltip);
 tipSlider.addEventListener("input", updateSliderBackground);
 
